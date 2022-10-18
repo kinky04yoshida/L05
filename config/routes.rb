@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'users/index'
   root 'users#index'
-  get 'top/login', to: 'top#login'
+  get 'top/main', to: 'top#main'
   get 'tweets/new', to: 'tweets#new'
   post 'tweets', to: 'tweets#create'
   get 'users/new', to: 'users#new'
