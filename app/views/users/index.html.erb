@@ -6,7 +6,7 @@
     
 <h1>課題05</h1>
 <% if session[:login_uid] %>
-  <h class="login_user"><%= @login_user %>でログイン中です。</h>
+  <h class="login_user"><%= @login_user %></h>
 <% end %>
 
 <p><% @tweets.each do |tweet| %></p>
