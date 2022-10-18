@@ -3,15 +3,7 @@
     <%= flash[:notice] %>
   <% end %>
 </p>
-          <nav>
-          <ul>
-            <li><a href=".">ツイート</a></li>
-            <li><a href=".">返信</a></li>
-            <li><a href=".">メディア</a></li>
-            <li><a href=".">いいね</a></li>
-          </ul>
-        </nav>
-      
+
       <p><%= @tweets.each do |tweet| %></p>
       <hr width="100%"><p><h class="username">ユーザー名</h>　</p>
       <p class ="message"><%= tweet["message"] %></p>
