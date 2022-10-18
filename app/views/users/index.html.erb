@@ -13,7 +13,7 @@
         </nav>
       
       <p><%= @tweets.each do |tweet| %></p>
-      <hr width="100%"><p><h class="username">ユーザー名</h>　<%= tweet["tdate"].strftime('%m月%d日') %></p>
+      <hr width="100%"><p><h class="username">ユーザー名</h>　</p>
       <p class ="message"><%= tweet["message"] %></p>
         <%= link_to '表示', "/tweets/#{tweet.id}" %>
         <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
