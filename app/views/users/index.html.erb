@@ -8,6 +8,7 @@
       <hr width="100%"><p><h class="username">ユーザー名</h>　</p>
       <p class ="message"><%= tweet["message"] %></p>
         <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+      <hr width="100%">
   <% end %>
 <p><%= link_to 'ユーザ登録'  %></p>
 <p><%= link_to 'ユーザ一覧' %></p>
