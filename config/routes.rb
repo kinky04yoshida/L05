@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'top/main'
   root 'users#index'
+  get 'tweets/index'
+  root 'tweets#index'
   get 'tweets/new', to: 'tweets#new'
   post 'tweets', to: 'tweets#create'
   delete 'tweets/:id', to: 'tweets#destroy'
