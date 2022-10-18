@@ -2,6 +2,8 @@
 <p>パスワードは暗号化されたものが表示されます。</p>
 <p><% @users.each do |user| %></p>
       <hr width="100%">
-      <p><h class="userid"><%= user["uid"] %></h></p>
+      <p><h class="userid">
+            ユーザーID:
+            <%= user["uid"] %></h></p>
       <p class ="userpass"><%= user["pass"] %></p>
 <% end %>
