@@ -16,4 +16,5 @@
 <p><%= link_to 'ユーザ登録', '/users/new'  %></p>
 <p><%= link_to 'ユーザ一覧', '/users/list' %></p>
 <p><% if session[:login_uid] %>
-<%= link_to '新規Tweet', '/tweets/new' %></p>
+<%= link_to '新規Tweet', '/tweets/new' %>
+<% end %></p>
