@@ -7,8 +7,6 @@
       <p><% @tweets.each do |tweet| %></p>
       <hr width="100%"><p><h class="username">ユーザー名</h>　</p>
       <p class ="message"><%= tweet["message"] %></p>
-        <%= link_to '表示', "/tweets/#{tweet.id}" %>
-        <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
         <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
   <% end %>
 <p><%= link_to 'ユーザ登録'  %></p>

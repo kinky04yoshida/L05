@@ -18,5 +18,9 @@ class TweetsController < ApplicationController
     tweet.destroy
     redirect_to '/'
   end
+  
+  #def edit
+    
+  #end
 
 end
