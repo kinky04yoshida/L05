@@ -19,8 +19,4 @@ class TweetsController < ApplicationController
     redirect_to '/'
   end
   
-  #def edit
-    
-  #end
-
 end
