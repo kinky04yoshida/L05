@@ -15,7 +15,6 @@
       <p><%= @tweets.each do |tweet| %></p>
       <hr width="100%"><p><h class="username">ユーザー名</h>　<%= tweet["tdate"].strftime('%m月%d日') %></p>
       <p class ="message"><%= tweet["message"] %></p>
-      <%= (Time.now - tweet["tdate"]).div(60) %>分前にツイート
         <%= link_to '表示', "/tweets/#{tweet.id}" %>
         <%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
         <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
