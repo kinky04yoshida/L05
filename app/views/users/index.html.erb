@@ -5,7 +5,10 @@
 </p>
     
 <h1>課題05</h1>
-<h class="login_user"><%= @login_user %>でログイン中です。</h>
+<% if session[:login_uid] %>
+  <h class="login_user"><%= @login_user %>でログイン中です。</h>
+<% end %>
+
 <p><% @tweets.each do |tweet| %></p>
     <hr width="100%">
     <p><h class="username">ユーザ</h></p>
