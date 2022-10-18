@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   post 'tweets', to: 'tweets#create'
   delete 'tweets/:id', to: 'tweets#destroy'
   get 'tweets/:id', to: 'tweets#show'
+  get 'users/list', to: 'users#list'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
