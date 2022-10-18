@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   get 'top/main'
-  resources :users
-  resources :tweets
   root 'users#index'
   get 'tweets/new', to: 'tweets#new'
   post 'tweets', to: 'tweets#create'
