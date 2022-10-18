@@ -4,7 +4,7 @@
   <% end %>
 </p>
 
-      <p><%= @tweets.each do |tweet| %></p>
+      <p><% @tweets.each do |tweet| %></p>
       <hr width="100%"><p><h class="username">ユーザー名</h>　</p>
       <p class ="message"><%= tweet["message"] %></p>
         <%= link_to '表示', "/tweets/#{tweet.id}" %>
