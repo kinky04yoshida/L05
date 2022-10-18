@@ -4,8 +4,5 @@ class UsersController < ApplicationController
     @tweets = Tweet.all
   end
   
-  def list
-    @users = User.all
-  end
-
+  
 end
