@@ -15,4 +15,5 @@
 <p><%= link_to 'ログイン', '/top/main'  %></p>
 <p><%= link_to 'ユーザ登録', '/users/new'  %></p>
 <p><%= link_to 'ユーザ一覧', '/users/list' %></p>
-<p><%= link_to '新規Tweet', '/tweets/new' %></p>
+<p><% if session[:login_uid] %>
+<%= link_to '新規Tweet', '/tweets/new' %></p>
