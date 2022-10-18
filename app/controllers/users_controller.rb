@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
   
   def list
-    
+    @users = User.all
   end
   
    
