@@ -1,8 +1,6 @@
 <%= form_for @user, url: {action: :create} do |f| %>
-    <p><%= f.label :uid, '新規ユーザアカウント作成' %></p>
-    ID<br>
+    <p><%= f.label :uid %></p>
     <%= f.text_field :uid %><br>
-    パスワード<br>
     <%= f.label :pass %>
     <%= f.text_field :pass %><br>
     <%= f.submit '作成' %>
