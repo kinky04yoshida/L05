@@ -2,7 +2,8 @@ class TopController < ApplicationController
 
   def main
     if session[:login_uid]
-      @user = User.find_by(uid: session[:login_id])
+      user = User.find_by(uid: session[:login_id])
+      @login_user = user.uid
       render "main"
     else
       render "login"
