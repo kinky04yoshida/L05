@@ -19,7 +19,7 @@ class TopController < ApplicationController
       db_pass = user.pass
       if BCrypt::Password.new(db_pass) == input_pass
         session[:login_uid] = params[:uid]
-        @login_user = user.pass
+        @login_user = input_pass
         redirect_to root_path
       else
         render 'error'
