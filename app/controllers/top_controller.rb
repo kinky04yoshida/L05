@@ -2,8 +2,6 @@ class TopController < ApplicationController
 
   def main
     if session[:login_uid]
-      user = User.find_by(uid: session[:login_id])
-      @login_user = user.uid
       render "main"
     else
       render "login"
@@ -21,6 +19,7 @@ class TopController < ApplicationController
       db_pass = user.pass
       if BCrypt::Password.new(db_pass) == input_pass
         session[:login_uid] = params[:uid]
+        @login_user = user.uid
         redirect_to root_path
       else
         render 'error'
