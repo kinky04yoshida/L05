@@ -1,5 +1,5 @@
 <%= form_for @user, url: {action: :create} do |f| %>
-    <p><%= f.label :uid %></p>
+    <%= f.label :uid %>
     <%= f.text_field :uid %><br>
     <%= f.label :pass %>
     <%= f.text_field :pass %><br>
