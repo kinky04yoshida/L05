@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  #resources :users
+  resources :users
   resources :tweets
   root 'top#main'
-  
-  get 'users/index', to: 'users#index'
-
   get 'top/main'
   post 'top/login'
   get 'top/logout'
