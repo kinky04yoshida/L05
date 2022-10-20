@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post '/top/login'
   get '/top/logout'
   #resources :top
-  #resources :likes
+  resources :likes
   #post 'likes', to: 'likes#create'
   #delete 'likes/:id', to: 'likes#destroy'
   
