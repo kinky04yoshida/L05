@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'top#main'
   resources :users
   resources :tweets
+  get '/top/logout'
   #resources :top
   #resources :likes
   #post 'likes', to: 'likes#create'
