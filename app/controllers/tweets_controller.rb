@@ -8,7 +8,8 @@ class TweetsController < ApplicationController
   end
   
   def create
-    tweet = Tweet.new(message: params[:tweet][:message], tdate: Time.current)
+    user = User.find_by(uid: session[:uid])
+    tweet = Tweet.new(message: params[:tweet][:message], tdate: Time.current, user_id: user.id)
     tweet.save
     redirect_to '/'
   end
