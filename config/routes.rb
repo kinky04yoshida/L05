@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :tweets
   root 'top#main'
 
+  get 'tweets/index', to: 'tweets/list'
+
   get 'top/main'
   post 'top/login'
   get 'top/logout'
