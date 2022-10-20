@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :useres
   resources :tweets
-  root 'top#main'
+  root 'users#index'
 
   #get 'top/main'
   #post 'top/login'
