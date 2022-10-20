@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'top#main'
   resources :users
   #resources :tweets
   #resources :top
