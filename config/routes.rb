@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post '/top/login'
   get '/top/logout'
   get '/top/main'
-  get '/users', to: '/users#indexex'
+  get '/users', to: '/users#index'
   get '/users/list'
   #resources :top
   resources :likes
