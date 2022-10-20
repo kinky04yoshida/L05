@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root 'top#main'
 
   get 'tweets/index'
-  post 'tweets/list'
 
   get 'top/main'
   post 'top/login'
