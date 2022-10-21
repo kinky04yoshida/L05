@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     #cpass = BCrypt::Password.create(params[:pass])
     user = User.new(uid: params[:user][:uid], pass: cpass)
     if user.save
-      redirect_to 'users/list'
+      redirect_to '/users/list'
     else
       redirect_to 'users/new'
     end
