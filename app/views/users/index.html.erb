@@ -15,8 +15,7 @@
     <p>
       <h class="username">by </h>
       <%= e["user_id"] %>
-      が
-      
+      <%= e["tdate"] %>
     </p>
     <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
     <% if e.likes.count == 0 %>
