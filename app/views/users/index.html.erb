@@ -11,10 +11,9 @@
 
 <p><% @tweets.each do |e| %></p>
     <hr width="100%">
+    <%= User.find_by(id: e["user_id"]).uid %>
     <p class ="message"><%= e["message"] %></p>
     <p>
-      <h class="username">-</h>
-      <%= User.find_by(id: e["user_id"]).uid %>
       <%= e["tdate"] %>
     </p>
     <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
