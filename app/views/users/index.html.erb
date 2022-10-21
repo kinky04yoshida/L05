@@ -5,9 +5,8 @@
 </p>
     
 <h1>課題05</h1>
-<% if @login_user %>
   <h class="login_user"><%= @login_user %>でログイン中です。</h>
-<% end %>
+
 
 <p><% @tweets.each do |e| %></p>
     <hr width="100%">
