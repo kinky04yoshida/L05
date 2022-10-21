@@ -13,7 +13,7 @@
     <hr width="100%">
     <p class ="message"><%= e["message"] %></p>
     <p>
-      <h class="username">- tweeted by </h>
+      <h class="username">-by </h>
       <%= User.find_by(id: e["user_id"]).uid %>
       <%= e["tdate"] %>
     </p>
