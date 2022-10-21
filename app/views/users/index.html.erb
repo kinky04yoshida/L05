@@ -14,7 +14,8 @@
     <p class ="message"><%= e["message"] %></p>
     <p>
       <h class="username">by </h>
-      <%= e["user_id"] %>
+      <% user = User.find_by(id: e["user_id"]) %>
+      <%= user.uid %>
       <%= e["tdate"] %>
     </p>
     <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
