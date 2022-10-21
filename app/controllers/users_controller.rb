@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
   
   def create
-    cpass = params([:user][:pass])
+    cpass = params(pass: [:user][:pass])
     #cpass = BCrypt::Password.create(params[:pass])
     user = User.new(uid: params[:user][:uid], pass: cpass)
     if user.save
