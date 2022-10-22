@@ -5,7 +5,7 @@
 </p>
     
 <h1>課題6-1</h1>
-  <h class="login_user"><%= session[:login_uid] %>でログイン中です。</h>
+  <h class="login_user"><%= current_user %>でログイン中です。</h>
   <p></p>
 
 <p><% @tweets.each do |e| %></p>
@@ -26,8 +26,7 @@
     <% else %>
       <%= link_to 'いいね削除', like_path(e), method: :delete %>
     <% end %>
-    </p>
-<% end %>
+  <% end %></p>
 <hr width="100%" noshade="">
 <p><%= link_to 'ログイン', '/top/main'  %></p>
 <p><%= link_to 'ユーザ登録', '/users/new'  %></p>
