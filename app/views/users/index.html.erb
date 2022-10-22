@@ -28,11 +28,15 @@
     <% end %>
   <% end %></p>
 <hr width="100%" noshade="">
-<p><%= link_to 'ログイン', '/top/main'  %></p>
+<p>
+  <% unless current_user %>
+    <%= link_to 'ログイン', '/top/main'  %>
+  <% end %>
+</p>
 <p><%= link_to 'ユーザ登録', '/users/new'  %></p>
 <p><%= link_to 'ユーザ一覧', '/users/list' %></p>
 <p>
-  <% if session[:login_uid] %>
+  <% if current_user %>
     <%= link_to '新規Tweet', '/tweets/new' %>
   <% else %>
     新規Tweetするにはログインしてください。
