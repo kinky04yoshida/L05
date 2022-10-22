@@ -28,8 +28,8 @@ class TweetsController < ApplicationController
     likes.find_by(user_id: user.id).destroy
   end
 
-  def liked?(user) #いいね済みか調べる(true / false)
-    like_users.include?(user)
+  def liked?(user)
+    like_users.include(user)
   end
   
 end
