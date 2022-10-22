@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   post '/top/login'
   get '/top/logout'
   get '/top/main'
-  get '/users', to: '/users#index'
+  get '/users', to: 'users#index'
   get '/users/new', to: '/users#new'
-  post '/users/new', to: '/users#create'
+  post '/users/new', to: 'users#create'
   get '/users/list'
   #resources :top
   resources :likes
