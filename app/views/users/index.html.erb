@@ -10,7 +10,7 @@
 
 <p><% @tweets.each do |e| %></p>
     <hr width="100%">
-    <h class="user_name"><%= User.find_by(id: e["user_id"]) %></h>
+    <h class="user_name"><%= User.find_by(id: e["user_id"].uid ) %></h>
     <p class ="message"><%= e["message"] %></p>
     <p>
       <% if (Time.now-e["tdate"]).div(60) >= 1440 %>
