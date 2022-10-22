@@ -1,3 +1,6 @@
+<% if session[:login_uid] %>
+    <%= session[:login_uid] %>だよ
+<% end %>
 <%= form_for @tweet, url: {action: :create} do |f| %>
     <p><%= f.label :message, '新規Tweet' %></p>
     文章を入力してください。(140文字以内)<br>
