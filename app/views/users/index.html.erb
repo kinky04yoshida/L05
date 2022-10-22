@@ -14,7 +14,11 @@
     <h class="user_name"><%= User.find_by(id: e["user_id"]).uid %></h>
     <p class ="message"><%= e["message"] %></p>
     <p>
-      <%= (Time.now-e["tdate"]).div(60) %>
+      <% if (Time.now-e["tdate"]).div(60) >= 3600 %>
+        <%= (Time.now-e["tdate"]).div(3600) %>時間前
+      <% else %>
+        <%= (Time.now-e["tdate"]).div(60) %>分前
+      <% end %>
     </p>
     <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
     <% if e.likes.count == 0 %>
