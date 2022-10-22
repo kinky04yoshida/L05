@@ -10,7 +10,7 @@ class LikesController < ApplicationController
     def destroy
         tweet = Tweet.find(params[:id])
         if tweet.liked?(current_user.uid)
-            tweet.unlike(current_user.uid)
+            tweet.unlike(current_user)
         end
     redirect_to root_path
     end
