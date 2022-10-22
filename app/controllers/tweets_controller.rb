@@ -32,7 +32,7 @@ class TweetsController < ApplicationController
 
   def liked?(user)
     user = User.find_by(uid: current_user.uid)
-    like_users.include(user)
+    like_users.include?(user)
   end
   
 end
