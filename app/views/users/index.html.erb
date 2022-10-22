@@ -8,7 +8,6 @@
   <h class="login_user"><%= session[:login_uid] %>でログイン中です。</h>
   <p></p>
 
-
 <p><% @tweets.each do |e| %></p>
     <hr width="100%">
     <h class="user_name"><%= User.find_by(id: e["user_id"]).uid %></h>
