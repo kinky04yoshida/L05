@@ -31,6 +31,8 @@
 <p>
   <% unless current_user %>
     <%= link_to 'ログイン', '/top/main'  %>
+  <% else %>
+    <%= link_to '戻る', '/top/main' %>
   <% end %>
 </p>
 <p><%= link_to 'ユーザ登録', '/users/new'  %></p>
