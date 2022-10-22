@@ -21,14 +21,17 @@ class TweetsController < ApplicationController
   end
   
   def like(user)
+    user = User.find_by(uid: current_user.uid)
     likes.create(user_id: user.id)
   end
 
   def unlike(user)
+    user = User.find_by(uid: current_user.uid)
     likes.find_by(user_id: user.id).destroy
   end
 
   def liked?(user)
+    user = User.find_by(uid: current_user.uid)
     like_users.include(user)
   end
   
