@@ -14,9 +14,11 @@
     <h class="user_name"><%= User.find_by(id: e["user_id"]).uid %></h>
     <p class ="message"><%= e["message"] %></p>
     <p>
-      <% if (Time.now-e["tdate"]).div(60) >= 60 %>
+      <% elsif (Time.now-e["tdate"]).div(60) >= 3600 %>
+        <%= (Time.now-e["tdate"]).div(86400) %>日前
+      <% elsif (Time.now-e["tdate"]).div(60) >= 60 %>
         <%= (Time.now-e["tdate"]).div(3600) %>時間前
-      <% else %>
+      <% elsif %>
         <%= (Time.now-e["tdate"]).div(60) %>分前
       <% end %>
     </p>
