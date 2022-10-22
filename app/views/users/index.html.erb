@@ -9,7 +9,7 @@
   <p></p>
 
 <p><% @tweets.each do |e| %></p>
-    <hr width="100%">
+    <hr width="100%" noshade="">
     <h class="user_name"><%= User.find_by(id: e["user_id"]).uid %></h>
     <p class ="message"><%= e["message"] %></p>
     <p>
