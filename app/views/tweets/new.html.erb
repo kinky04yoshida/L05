@@ -1,5 +1,5 @@
-<% if session[:login_uid] %>
-    <%= session[:login_uid] %>でログイン中
+<% if current_user %>
+    <%= current_user.uid %>でログイン中
 <% end %>
 <%= form_for @tweet, url: {action: :create} do |f| %>
     <p><%= f.label :message, '新規Tweet' %></p>
