@@ -1,4 +1,6 @@
-
+.user_name {
+    text-decoration: underline
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
