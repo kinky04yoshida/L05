@@ -18,7 +18,6 @@
     <h class="user_name"><%= User.find_by(id: e["user_id"]).uid %></h>
     <p class ="message"><%= e["message"] %></p>
     <p>
-
     <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
     <% if e.likes.count == 0 %>
       <%= link_to 'いいね', likes_path(tweet_id: e.id), method: :post %>
