@@ -10,4 +10,8 @@ class Tweet < ApplicationRecord
         likes.find_by(user_id: user.id).destroy
     end
 
+    def liked?(user)
+        like_users.include?(user)
+    end
+
 end
