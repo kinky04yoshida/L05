@@ -1,5 +1,5 @@
 class Tweet < ApplicationRecord
-    validates :message, presence: true
+    #validates :message, presence: true
     
     has_many :likes, dependent: :destroy
     has_many :like_users, through: :likes, source: :user
