@@ -21,9 +21,9 @@ class UsersController < ApplicationController
       password: params[:user][:password],
       password_confirmation: params[:user][:password_confirmation])
     if @user.save
-      redirect_to '/users/list'
+      render '/users/list'
     else
-      redirect_to 'users/new'
+      redirect_to '/users/new'
     end
   end
 
