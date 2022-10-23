@@ -15,7 +15,6 @@ class TweetsController < ApplicationController
     else
       render '/tweets/new'
     end
-    redirect_to '/'
   end
   
   def destroy
