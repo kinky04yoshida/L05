@@ -18,13 +18,7 @@
     <h class="user_name"><%= User.find_by(id: e["user_id"]).uid %></h>
     <p class ="message"><%= e["message"] %></p>
     <p>
-      <% if (Time.now-e["tdate"]).div(60) >= 1440 %>
-        <%= (Time.now-e["tdate"]).div(86400) %>日前
-      <% elsif (Time.now-e["tdate"]).div(60) >= 60 %>
-        <%= (Time.now-e["tdate"]).div(3600) %>時間前
-      <% elsif %>
-        <%= (Time.now-e["tdate"]).div(60) %>分前
-      <% end %>
+
     <%= link_to '削除', "/tweets/#{e.id}", method: :delete %>
     <% if e.likes.count == 0 %>
       <%= link_to 'いいね', likes_path(tweet_id: e.id), method: :post %>
@@ -33,6 +27,7 @@
     <% end %>
   <% end %></p>
 <hr width="100%" noshade="">
+
 <p>
   <% unless current_user %>
     <%= link_to 'ログイン', '/top/main'  %>
@@ -40,6 +35,7 @@
     <%= link_to '戻る', '/top/main' %>
   <% end %>
 </p>
+
 <p><%= link_to 'ユーザ登録', '/users/new'  %></p>
 <p><%= link_to 'ユーザ一覧', '/users/list' %></p>
 <p>
