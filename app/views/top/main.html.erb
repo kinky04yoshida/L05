@@ -1,5 +1,9 @@
-<h><%= current_user.uid %></h>
-でログイン中です。<br>
+<h>
+    <% if current_user %>
+        <%= current_user.uid %>でログイン中です。
+    <% end %>
+</h>
+<br>
 <p>ここがメインページです。</p>
-<%= link_to 'Tweetする', '/users' %><br>
+<%= link_to 'Twitterページへ移動する', '/users' %><br>
 <%= link_to 'ログアウト', '/top/logout' %>
