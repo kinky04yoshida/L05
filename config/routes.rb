@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'top#main'
+  get '/tweets/new', to: 'tweets#new'
+  post '/tweets/new', to: 'tweets#create'
   resources :tweets
   post '/top/login'
   get '/top/logout'
