@@ -11,7 +11,7 @@ class Tweet < ApplicationRecord
     end
 
     def liked?(user)
-        like_users.include?(user)
+        like_users.include?(user.id)
     end
 
 end
