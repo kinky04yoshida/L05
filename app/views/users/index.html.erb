@@ -6,7 +6,7 @@
     
 <h1>課題6-1</h1>
   <h class="login_user"><%= current_user.uid %>でログイン中です。</h>
-  <p></p>
+  <p><%= like_users.include?(current_user) %></p>
 
 <p><% @tweets.each do |e| %></p>
     <hr width="100%" noshade="">
