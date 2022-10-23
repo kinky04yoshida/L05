@@ -1,3 +1,4 @@
+<h1>新規ツイート</h1>
 <% if @tweet.errors.present? %>
     <p>エラーがあります。</p>
     <ul>
@@ -10,7 +11,7 @@
     <%= current_user.uid %>でログイン中
 <% end %>
 <%= form_for @tweet, url: {action: :create} do |f| %>
-    <p><%= f.label :message, '新規Tweet' %></p>
+    <p><%= f.label :message, 'メッセージ内容' %></p>
     文章を入力してください。(140文字以内)<br>
     <%= f.text_field :message %>
     <%= f.submit 'つぶやく' %>
