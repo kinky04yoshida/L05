@@ -8,7 +8,7 @@ class LikesController < ApplicationController
     end
 
     def destroy
-        tweet = Tweet.find(id: params[:id])
+        tweet = Tweet.find(params[:id])
         if tweet.liked?(current_user)
             tweet.unlike(current_user)
         end
