@@ -1,5 +1,7 @@
 class Tweet < ApplicationRecord
-    has_many :likes
+    validates :message, presence: true
+    
+    has_many :likes, dependent: :destroy
     has_many :like_users, through: :likes, source: :user
 
     def like(user)

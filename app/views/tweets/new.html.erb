@@ -1,3 +1,11 @@
+<% if @tweet.errors.present? %>
+    <p>エラーがあります。</p>
+    <ul>
+        <% @tweet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
 <% if current_user %>
     <%= current_user.uid %>でログイン中
 <% end %>
