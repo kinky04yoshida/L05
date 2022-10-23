@@ -1,6 +1,6 @@
 class Tweet < ApplicationRecord
-    has_many :like_users, through: :like, source: :user
     has_many :likes
+    has_many :like_users, through: :like, source: :user
 
     def like(user)
         likes.create(user_id: user.id)
