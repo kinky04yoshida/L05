@@ -9,8 +9,8 @@ class TweetsController < ApplicationController
   
   def create
     user = User.find_by(uid: current_user.uid)
-    tweet = Tweet.new(message: params[:tweet][:message], tdate: Time.current, user_id: user.id)
-    if tweet.save
+    @tweet = Tweet.new(message: params[:tweet][:message], tdate: Time.current, user_id: user.id)
+    if @tweet.save
       redirect_to '/'
     else
       render '/tweets/new'
@@ -19,8 +19,8 @@ class TweetsController < ApplicationController
   end
   
   def destroy
-    tweet = Tweet.find(params[:id])
-    tweet.destroy
+    @tweet = Tweet.find(params[:id])
+    @tweet.destroy
     redirect_to '/'
   end
   
