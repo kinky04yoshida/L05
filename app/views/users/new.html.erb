@@ -1,8 +1,8 @@
 <h1>新規ユーザ登録</h1>
-<% if @user.errors.present? %>
+<% if user.errors.present? %>
     <p>エラーがあります。</p>
     <ul>
-        <% @user.errors.full_messages.each do |msg| %>
+        <% user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
         <% end %>
     </ul>
