@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
     user = User.find_by(uid: current_user.uid)
     @tweet = Tweet.new(message: params[:tweet][:message], tdate: Time.current, user_id: user.id)
     if @tweet.save
-      redirect_to '/'
+      redirect_to '/users'
     else
       render '/tweets/new'
     end
