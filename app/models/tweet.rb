@@ -1,4 +1,5 @@
 class Tweet < ApplicationRecord
+    belongs_to :user
     has_many :likes
     has_many :like_users, through: :like, source: :user
 
@@ -11,7 +12,7 @@ class Tweet < ApplicationRecord
     end
 
     def liked?(user)
-        #like_users.include?(user)
+        like_users.include?(user)
     end
 
 end
