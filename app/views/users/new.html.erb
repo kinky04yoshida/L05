@@ -1,13 +1,13 @@
 <h1>新規ユーザ登録</h1>
-<% if user.errors.present? %>
+<% if @user.errors.present? %>
     <p>エラーがあります。</p>
     <ul>
-        <% user.errors.full_messages.each do |msg| %>
+        <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
         <% end %>
     </ul>
 <% end %>
-<%= form_for @user, url: {action: :create} do |f| %>
+<%= form_for @suser, url: {action: :create} do |f| %>
     <%= f.label :uid, 'ID' %><br>
     <%= f.text_field :uid %><br>
     <%= f.label :password, 'パスワード' %><br>
